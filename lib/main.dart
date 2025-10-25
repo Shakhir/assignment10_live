@@ -88,6 +88,8 @@ class MyHomePage extends StatelessWidget {
               ),
             ),
           ),
+          const SizedBox(height: 12),
+
           Expanded(
             child: ListView.builder(
               itemCount: 20,
