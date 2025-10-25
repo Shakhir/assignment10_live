@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
 
-String getName(s1, s2) {
-  return s1 + " " + s2;
-}
-
 void main() {
   runApp(const MyApp());
 }
