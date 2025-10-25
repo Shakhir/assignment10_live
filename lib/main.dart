@@ -12,9 +12,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       title: 'Flutter Demo',
-      theme: ThemeData(
-        colorScheme: ColorScheme.fromSeed(seedColor: Colors.teal),
-      ),
+
       home: MyHomePage(),
     );
   }
@@ -45,7 +43,7 @@ class MyHomePage extends StatelessWidget {
             decoration: InputDecoration(
               hintText: 'Hasan',
               filled: true,
-              fillColor: Colors.grey[100],
+              // fillColor: Colors.grey[100],
               border: OutlineInputBorder(
                 borderRadius: BorderRadius.circular(4),
                 borderSide: BorderSide(color: Colors.grey[300]!),
