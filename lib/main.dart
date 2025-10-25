@@ -37,78 +37,81 @@ class MyHomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(title: Text('Contact List'),
       centerTitle: true,),
-      body: Column(
-        children: [
-          TextField(
-            controller: nameController,
-            decoration: InputDecoration(
-              hintText: 'Hasan',
-              filled: true,
-              // fillColor: Colors.grey[100],
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(4),
-                borderSide: BorderSide(color: Colors.grey[300]!),
-              ),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(4),
-                borderSide: BorderSide(color: Colors.grey[300]!),
-              ),
-            ),
-          ),
-          const SizedBox(height: 12),
-          TextField(
-            controller: phoneController,
-            keyboardType: TextInputType.phone,
-            decoration: InputDecoration(
-              hintText: '01745-777777',
-              filled: true,
-              fillColor: Colors.grey[100],
-              border: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(4),
-                borderSide: BorderSide(color: Colors.grey[300]!),
-              ),
-              enabledBorder: OutlineInputBorder(
-                borderRadius: BorderRadius.circular(4),
-                borderSide: BorderSide(color: Colors.grey[300]!),
-              ),
-            ),
-          ),
-          const SizedBox(height: 12),
-          SizedBox(
-            width: double.infinity,
-            child: ElevatedButton(
-              onPressed: () {},
-              child: Text('Add'),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: const Color(0xFF607D8B),
-                shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(10),
+      body: Padding(
+        padding: const EdgeInsets.all(8.0),
+        child: Column(
+          children: [
+            TextField(
+              controller: nameController,
+              decoration: InputDecoration(
+                hintText: 'Hasan',
+                filled: true,
+                // fillColor: Colors.grey[100],
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(4),
+                  borderSide: BorderSide(color: Colors.grey[300]!),
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(4),
+                  borderSide: BorderSide(color: Colors.grey[300]!),
                 ),
               ),
             ),
-          ),
-          const SizedBox(height: 12),
-
-          Expanded(
-            child: ListView.builder(
-              itemCount: 20,
-              itemBuilder: (context, index) {
-                return Column(
-                  children: [
-                    Card(
-                      child: ListTile(
-                        title: Text('Taufiq'),
-                        subtitle: Text('0179294554562'),
-                        leading: Icon(Icons.phone),
-                        trailing: Icon(Icons.delete, color: Colors.red),
-                      ),
-                    ),
-                  ],
-                );
-              },
+            const SizedBox(height: 12),
+            TextField(
+              controller: phoneController,
+              keyboardType: TextInputType.phone,
+              decoration: InputDecoration(
+                hintText: '01745-777777',
+                filled: true,
+                fillColor: Colors.grey[100],
+                border: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(4),
+                  borderSide: BorderSide(color: Colors.grey[300]!),
+                ),
+                enabledBorder: OutlineInputBorder(
+                  borderRadius: BorderRadius.circular(4),
+                  borderSide: BorderSide(color: Colors.grey[300]!),
+                ),
+              ),
             ),
-          ),
-        ],
+            const SizedBox(height: 12),
+            SizedBox(
+              width: double.infinity,
+              child: ElevatedButton(
+                onPressed: () {},
+                child: Text('Add'),
+                style: ElevatedButton.styleFrom(
+                  backgroundColor: const Color(0xFF607D8B),
+                  shape: RoundedRectangleBorder(
+                    borderRadius: BorderRadius.circular(10),
+                  ),
+                ),
+              ),
+            ),
+            const SizedBox(height: 12),
+
+            Expanded(
+              child: ListView.builder(
+                itemCount: 20,
+                itemBuilder: (context, index) {
+                  return Column(
+                    children: [
+                      Card(
+                        child: ListTile(
+                          title: Text('Taufiq'),
+                          subtitle: Text('0179294554562'),
+                          leading: Icon(Icons.phone),
+                          trailing: Icon(Icons.delete, color: Colors.red),
+                        ),
+                      ),
+                    ],
+                  );
+                },
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
